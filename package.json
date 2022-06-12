@@ -1,0 +1,40 @@
+{
+  "name": "movieguy",
+  "version": "1.0.0",
+  "description": "a web app to buy and sell books",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "boot": "concurrently  \"npm run server \"  \" npm run client\" ",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.14",
+    "react-stripe-checkout": "^2.6.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.5.1",
+    "nodemon": "^2.0.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kusalr2/Ds-Assignemt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kusalr2/Ds-Assignemt"
+  },
+  "homepage": "https://github.com/kusalr2/Ds-Assignemt#readme"
+}
